@@ -1,0 +1,30 @@
+[project]
+name = "webscrapping-series"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Clément Fouchier", email = "clement.fouchier78@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "afinn==0.1",
+    "beautifulsoup4==4.14.3",
+    "matplotlib==3.11.2",
+    "nltk==3.9.2",
+    "numpy==2.4.0",
+    "pandas==3.0.1",
+    "requests==2.34.2",
+    "scikit-learn==1.9.1",
+    "scipy==1.18.1",
+    "seaborn==0.13.2",
+    "selenium==4.41.0",
+    "statistics>=1.0.3.5",
+]
+
+[project.scripts]
+webscrapping-series = "webscrapping_series:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
