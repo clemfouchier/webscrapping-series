@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/semanticModel/unappliedChanges/1.0.0/schema.json",
+  "conceptualSchemaSettings": {},
+  "queries": [
+    {
+      "name": "dim_Comments",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/clemfouchier/webscrapping-series/refs/heads/main/0_Data/2_Clean/data_preprocessed.csv?token=GHSAT0AAAAAAEKDQTIODMK7GJFKJQYZNXDC2V2R7VQ\"),[Delimiter=\",\", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+        "    #\"En-têtes promus\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])",
+        "in",
+        "    #\"En-têtes promus\""
+      ],
+      "isDirectQuery": false,
+      "resultType": "Table"
+    },
+    {
+      "name": "fact_Bigrams",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/clemfouchier/webscrapping-series/refs/heads/main/0_Data/2_Clean/bigrams.csv?token=GHSAT0AAAAAAEKDQTIPV6PCGZXP6O43FECY2V2SA6Q\"),[Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+        "    #\"En-têtes promus\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])",
+        "in",
+        "    #\"En-têtes promus\""
+      ],
+      "isDirectQuery": false,
+      "resultType": "Table"
+    },
+    {
+      "name": "dim_info_series",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/clemfouchier/webscrapping-series/refs/heads/main/0_Data/2_Clean/info_series.csv?token=GHSAT0AAAAAAEKDQTIPIKEFLSEIP54AVWNK2V2SEIA\"),[Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+        "    #\"En-têtes promus\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])",
+        "in",
+        "    #\"En-têtes promus\""
+      ],
+      "isDirectQuery": false,
+      "resultType": "Table"
+    }
+  ],
+  "queryGroups": [],
+  "culture": "fr-FR",
+  "firewallEnabled": true
+}
