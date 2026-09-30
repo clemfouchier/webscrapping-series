@@ -1,0 +1,8 @@
+relationship AutoDetected_1f990dfb-e3ef-4855-8365-1fba248c214d
+	fromColumn: fact_Bigrams.allocine_id
+	toColumn: dim_Info_series.allocine_id
+
+relationship AutoDetected_30a7e895-6d8c-4568-8285-04165556670b
+	fromColumn: fact_Bigrams.review_id
+	toColumn: dim_Comments.review_id
+

@@ -6,9 +6,25 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+/// Fichiers sources sans modification (issus de mes scripts python)
+queryGroup Src
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Transformations effectuées sur les données
+queryGroup Transformés
+
+	annotation PBI_QueryGroupOrder = 1
+
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["src_Comments","src_Bigrams","src_Info_series","dim_Comments","fact_Bigrams","dim_Info_series"]
+
+ref table dim_Comments
+ref table fact_Bigrams
+ref table dim_Info_series
 
 ref cultureInfo fr-FR
 

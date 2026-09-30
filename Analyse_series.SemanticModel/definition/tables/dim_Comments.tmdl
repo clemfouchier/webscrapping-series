@@ -1,0 +1,195 @@
+table dim_Comments
+	lineageTag: 56d9d662-2a3c-425c-ae79-ca2dc9b05b3f
+
+	column allocine_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d4bee9da-905d-49fe-b24f-d11d7ea7b1d1
+		summarizeBy: none
+		sourceColumn: allocine_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4dcc3a19-fc1f-4713-b86a-04d2a7238429
+		summarizeBy: none
+		sourceColumn: review_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column avis
+		dataType: string
+		lineageTag: 4ed0b00f-2bec-404f-9e3a-9f39d0c95978
+		summarizeBy: none
+		sourceColumn: avis
+
+		annotation SummarizationSetBy = Automatic
+
+	column dates
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 15a1ea71-cac4-4bdd-a70e-3ea6aef64566
+		summarizeBy: none
+		sourceColumn: dates
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column series
+		dataType: string
+		isHidden
+		lineageTag: 9d6cf9ad-7f91-4ec6-810a-07f6324f5b8b
+		summarizeBy: none
+		sourceColumn: series
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column plateforme
+		dataType: string
+		lineageTag: 06a1bd56-5980-449f-9a84-1641cb797d9d
+		summarizeBy: none
+		sourceColumn: plateforme
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes
+		dataType: int64
+		formatString: 0
+		displayFolder: Notes
+		lineageTag: 793e2975-9385-4dcf-9421-2ade94340580
+		summarizeBy: none
+		sourceColumn: notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_3
+		dataType: int64
+		isHidden
+		formatString: 0
+		displayFolder: Notes
+		lineageTag: d814ce08-5ae5-49cc-9c88-f67697a6f6ef
+		summarizeBy: none
+		sourceColumn: notes_3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column nb_capital_words
+		dataType: int64
+		formatString: 0
+		displayFolder: Métadonnées
+		lineageTag: f67d24b3-4346-43aa-9f7a-1cfbbc7e1e10
+		summarizeBy: none
+		sourceColumn: nb_capital_words
+
+		annotation SummarizationSetBy = Automatic
+
+	column nb_exclamation_points
+		dataType: int64
+		formatString: 0
+		displayFolder: Métadonnées
+		lineageTag: b205f866-f65b-427a-9858-151804359abb
+		summarizeBy: none
+		sourceColumn: nb_exclamation_points
+
+		annotation SummarizationSetBy = Automatic
+
+	column nb_exclamation_points_chains
+		dataType: int64
+		formatString: 0
+		displayFolder: Métadonnées
+		lineageTag: 4d7bf83b-ef2d-413a-9469-3e3883b63dfe
+		summarizeBy: none
+		sourceColumn: nb_exclamation_points_chains
+
+		annotation SummarizationSetBy = Automatic
+
+	column nb_interrogation_points
+		dataType: int64
+		formatString: 0
+		displayFolder: Métadonnées
+		lineageTag: 27d304a5-977f-40a3-bc04-26dcd5cc421f
+		summarizeBy: none
+		sourceColumn: nb_interrogation_points
+
+		annotation SummarizationSetBy = Automatic
+
+	column nb_interrogation_points_chains
+		dataType: int64
+		formatString: 0
+		displayFolder: Métadonnées
+		lineageTag: 34dad134-3032-497b-9d27-b44eb93adff9
+		summarizeBy: none
+		sourceColumn: nb_interrogation_points_chains
+
+		annotation SummarizationSetBy = Automatic
+
+	column lenght
+		dataType: int64
+		formatString: 0
+		displayFolder: Métadonnées
+		lineageTag: c495e2bb-eba7-4e8a-b391-e361ce4e61db
+		summarizeBy: none
+		sourceColumn: lenght
+
+		annotation SummarizationSetBy = Automatic
+
+	column tokens
+		dataType: string
+		isHidden
+		lineageTag: 275a652f-f248-47f7-afdb-f65408bbc031
+		summarizeBy: none
+		sourceColumn: tokens
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column tokens_lemmatized
+		dataType: string
+		isHidden
+		lineageTag: 6888da60-dcc2-4465-8c7e-c06337da3a17
+		summarizeBy: none
+		sourceColumn: tokens_lemmatized
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column notes_3_categories
+		dataType: string
+		displayFolder: Notes
+		lineageTag: 933c24ce-72e3-4a2d-a984-248fd8b0b983
+		summarizeBy: none
+		sourceColumn: notes_3_categories
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Comments = m
+		mode: import
+		queryGroup: Transformés
+		source =
+				let
+				    Source = src_Comments,
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"avis", type text}, {"dates", type date}, {"series", type text}, {"allocine_id", Int64.Type}, {"review_id", Int64.Type}, {"plateforme", type text}, {"notes", Int64.Type}, {"notes_3", Int64.Type}, {"nb_capital_words", Int64.Type}, {"nb_exclamation_points", Int64.Type}, {"nb_exclamation_points_chains", Int64.Type}, {"nb_interrogation_points", Int64.Type}, {"nb_interrogation_points_chains", Int64.Type}, {"lenght", Int64.Type}, {"tokens", type text}, {"tokens_lemmatized", type text}}),
+				    #"Colonnes permutées" = Table.ReorderColumns(#"Type modifié",{"allocine_id", "review_id", "avis", "dates", "series", "plateforme", "notes", "notes_3", "nb_capital_words", "nb_exclamation_points", "nb_exclamation_points_chains", "nb_interrogation_points", "nb_interrogation_points_chains", "lenght", "tokens", "tokens_lemmatized"}),
+				    #"Personnalisée ajoutée" = Table.AddColumn(#"Colonnes permutées", "notes_3_categories", each if [notes_3] = 1 then "Positif" else (if [notes_3] = 0 then "Neutre" else "Négatif"), type text)
+				in
+				    #"Personnalisée ajoutée"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,60 @@
+table fact_Bigrams
+	lineageTag: 003773d7-7bf7-4c82-88c9-35fdd2ae431f
+
+	column review_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2ec97b77-32f1-4684-8c67-6bf6b9e44a50
+		summarizeBy: none
+		sourceColumn: review_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column bigram
+		dataType: string
+		lineageTag: d53dbdbf-7234-44e4-8562-19ae43ccb310
+		summarizeBy: none
+		sourceColumn: bigram
+
+		annotation SummarizationSetBy = Automatic
+
+	column count
+		dataType: int64
+		formatString: 0
+		lineageTag: dad30442-e928-4227-a492-a9d32f8633ee
+		summarizeBy: sum
+		sourceColumn: count
+
+		annotation SummarizationSetBy = Automatic
+
+	column allocine_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3a5fdc1b-e896-45bc-9dcb-3cb6b398fdd6
+		summarizeBy: none
+		sourceColumn: allocine_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_Bigrams = m
+		mode: import
+		queryGroup: Transformés
+		source =
+				let
+				    Source = src_Bigrams,
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"review_id", Int64.Type}, {"bigram", type text}, {"count", Int64.Type}}),
+				    #"Requêtes fusionnées" = Table.NestedJoin(#"Type modifié", {"review_id"}, dim_Comments, {"review_id"}, "dim_Comments", JoinKind.LeftOuter),
+				    #"Ajout allocine_id" = Table.ExpandTableColumn(#"Requêtes fusionnées", "dim_Comments", {"allocine_id"}, {"allocine_id"})
+				in
+				    #"Ajout allocine_id"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

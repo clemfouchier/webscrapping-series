@@ -1,0 +1,39 @@
+expression src_Comments =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\CLFO0303\Scripts\webscrapping_series\0_Data\2_Clean\data_preprocessed.csv"),[Delimiter=",", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+	lineageTag: cd17f898-44c1-40f5-9373-c946e90bc2e2
+	queryGroup: Src
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression src_Bigrams =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\CLFO0303\Scripts\webscrapping_series\0_Data\2_Clean\bigrams.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+	lineageTag: 2bfe1e72-3d06-4d70-bea0-e91e5aea1a65
+	queryGroup: Src
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression src_Info_series =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\CLFO0303\Scripts\webscrapping_series\0_Data\2_Clean\info_series.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+		in
+		    #"En-têtes promus"
+	lineageTag: e7ef9375-787d-4e2e-9137-c85c8f0cfff3
+	queryGroup: Src
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

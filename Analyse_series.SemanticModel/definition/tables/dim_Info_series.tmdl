@@ -1,0 +1,69 @@
+table dim_Info_series
+	lineageTag: e73f9fdc-fcc0-4c1c-b37a-889a4de95fb6
+
+	column allocine_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f47bf31f-0fc2-4f7f-a34e-310762c15aa8
+		summarizeBy: none
+		sourceColumn: allocine_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 7a1fcde2-ffae-4fdb-ad30-97a2a735e579
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column genres
+		dataType: string
+		lineageTag: df112cc5-ee7e-432f-ba30-fb0eb04ca7dc
+		summarizeBy: none
+		sourceColumn: genres
+
+		annotation SummarizationSetBy = Automatic
+
+	column directors
+		dataType: string
+		lineageTag: 079a40f0-33a9-4164-a49c-ecd372aa60da
+		summarizeBy: none
+		sourceColumn: directors
+
+		annotation SummarizationSetBy = Automatic
+
+	column actors
+		dataType: string
+		lineageTag: 5b6ffe16-0578-4ea1-a1f8-3620f8ae08ec
+		summarizeBy: none
+		sourceColumn: actors
+
+		annotation SummarizationSetBy = Automatic
+
+	column nationalities
+		dataType: string
+		lineageTag: c20b1b7c-f618-4ec2-80b4-4beb9283021f
+		summarizeBy: none
+		sourceColumn: nationalities
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Info_series = m
+		mode: import
+		queryGroup: Transformés
+		source =
+				let
+				    Source = src_Info_series,
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"allocine_id", Int64.Type}, {"title", type text}, {"genres", type text}, {"directors", type text}, {"actors", type text}, {"nationalities", type text}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
