@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "83e50d134000ab2b93ba",
+  "position": {
+    "x": 417.64100671295768,
+    "y": 359.05787907448848,
+    "z": 0,
+    "height": 279.68719001591734,
+    "width": 842.84112666958879
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Info_series"
+                    }
+                  },
+                  "Property": "title"
+                }
+              },
+              "queryRef": "dim_Info_series.title",
+              "nativeQueryRef": "title"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Comments"
+                    }
+                  },
+                  "Property": "avis"
+                }
+              },
+              "queryRef": "dim_Comments.avis",
+              "nativeQueryRef": "avis"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_Comments"
+                  }
+                },
+                "Property": "avis"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "140.5271009910308D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_Info_series.title"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "672.7170553632055D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_Comments.avis"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "086c4d5b614c0c367263",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "avis"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6b6983038398b0d0de30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Info_series"
+              }
+            },
+            "Property": "title"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

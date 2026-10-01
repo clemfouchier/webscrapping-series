@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "4b4c636635be17ee0110",
+  "position": {
+    "x": 43.464901151122291,
+    "y": 130.39470345336687,
+    "z": 1,
+    "height": 508.350365637039,
+    "width": 340.16009596530489,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Bigrams"
+                    }
+                  },
+                  "Property": "bigram"
+                }
+              },
+              "queryRef": "fact_Bigrams.bigram",
+              "nativeQueryRef": "bigram",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_Bigrams"
+                        }
+                      },
+                      "Property": "count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_Bigrams.count)",
+              "nativeQueryRef": "Somme de count"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_Bigrams"
+                      }
+                    },
+                    "Property": "count"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b01308327a151668eb0a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Bigrams"
+              }
+            },
+            "Property": "bigram"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7109bc4d30c9b08bc25b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_Bigrams"
+                  }
+                },
+                "Property": "count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
