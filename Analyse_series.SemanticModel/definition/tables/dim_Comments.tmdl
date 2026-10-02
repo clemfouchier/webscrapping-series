@@ -15,7 +15,6 @@ table dim_Comments
 
 	column review_id
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 4dcc3a19-fc1f-4713-b86a-04d2a7238429
 		summarizeBy: none
@@ -177,13 +176,30 @@ table dim_Comments
 
 		annotation SummarizationSetBy = Automatic
 
+	column index
+		dataType: string
+		lineageTag: c08e4c6e-8305-47a0-8de1-d5e70835d6bb
+		summarizeBy: none
+		sourceColumn: index
+
+		annotation SummarizationSetBy = Automatic
+
+	column sentiment
+		dataType: int64
+		formatString: 0
+		lineageTag: fadb19ae-0708-4676-93fb-df2795ba43eb
+		summarizeBy: none
+		sourceColumn: sentiment
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_Comments = m
 		mode: import
 		queryGroup: Transformés
 		source =
 				let
 				    Source = src_Comments,
-				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"avis", type text}, {"dates", type date}, {"series", type text}, {"allocine_id", Int64.Type}, {"review_id", Int64.Type}, {"plateforme", type text}, {"notes", Int64.Type}, {"notes_3", Int64.Type}, {"nb_capital_words", Int64.Type}, {"nb_exclamation_points", Int64.Type}, {"nb_exclamation_points_chains", Int64.Type}, {"nb_interrogation_points", Int64.Type}, {"nb_interrogation_points_chains", Int64.Type}, {"lenght", Int64.Type}, {"tokens", type text}, {"tokens_lemmatized", type text}}),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"avis", type text}, {"dates", type date}, {"series", type text}, {"allocine_id", Int64.Type}, {"review_id", Int64.Type}, {"plateforme", type text}, {"notes", Int64.Type}, {"notes_3", Int64.Type}, {"nb_capital_words", Int64.Type}, {"nb_exclamation_points", Int64.Type}, {"nb_exclamation_points_chains", Int64.Type}, {"nb_interrogation_points", Int64.Type}, {"nb_interrogation_points_chains", Int64.Type}, {"lenght", Int64.Type}, {"tokens", type text}, {"tokens_lemmatized", type text}, {"sentiment", Int64.Type}}),
 				    #"Colonnes permutées" = Table.ReorderColumns(#"Type modifié",{"allocine_id", "review_id", "avis", "dates", "series", "plateforme", "notes", "notes_3", "nb_capital_words", "nb_exclamation_points", "nb_exclamation_points_chains", "nb_interrogation_points", "nb_interrogation_points_chains", "lenght", "tokens", "tokens_lemmatized"}),
 				    #"Personnalisée ajoutée" = Table.AddColumn(#"Colonnes permutées", "notes_3_categories", each if [notes_3] = 1 then "Positif" else (if [notes_3] = 0 then "Neutre" else "Négatif"), type text)
 				in

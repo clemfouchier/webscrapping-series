@@ -1,6 +1,6 @@
 expression src_Comments =
 		let
-		    Source = Csv.Document(File.Contents("C:\Users\CLFO0303\Scripts\webscrapping_series\0_Data\2_Clean\data_preprocessed.csv"),[Delimiter=",", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    Source = Csv.Document(File.Contents("C:\Users\CLFO0303\Scripts\webscrapping_series\0_Data\2_Clean\data_preprocessed_final.csv"),[Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
 		in
 		    #"En-têtes promus"

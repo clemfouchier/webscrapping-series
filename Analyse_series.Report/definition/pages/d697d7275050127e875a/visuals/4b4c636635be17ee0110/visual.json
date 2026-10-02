@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "4b4c636635be17ee0110",
   "position": {
-    "x": 43.464901151122291,
-    "y": 130.39470345336687,
-    "z": 1,
+    "x": 47.610349980240933,
+    "y": 168.47931065699493,
+    "z": 1000,
     "height": 508.350365637039,
-    "width": 340.16009596530489,
-    "tabOrder": 1
+    "width": 340.16009596530489
   },
   "visual": {
     "visualType": "barChart",
@@ -85,7 +84,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b01308327a151668eb0a",
+        "name": "8a1223cb4a5bd29c4a97",
         "field": {
           "Column": {
             "Expression": {
@@ -99,7 +98,7 @@
         "type": "Categorical"
       },
       {
-        "name": "7109bc4d30c9b08bc25b",
+        "name": "53da78141601e003400e",
         "field": {
           "Aggregation": {
             "Expression": {

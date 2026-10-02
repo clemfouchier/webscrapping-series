@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "c53e7a018288eec469dd",
+  "position": {
+    "x": 46,
+    "y": 390,
+    "z": 7000,
+    "height": 120,
+    "width": 138,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "card",
+    "drillFilterOtherVisuals": true
+  }
+}

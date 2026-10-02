@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "921368d390ad1c8a58a0",
   "position": {
-    "x": 43.464901151122291,
-    "y": 24.567118041938684,
-    "z": 3,
+    "x": 47.610349980240933,
+    "y": 62.65172524556673,
+    "z": 2000,
     "height": 92.59913723499966,
     "width": 300.47475143601929,
-    "tabOrder": 3
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -50,70 +50,10 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "dim_Info_series",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "d"
-                                }
-                              },
-                              "Property": "title"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'King & Conqueror'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c70f4a40c4ca65b212bc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Info_series"
-              }
-            },
-            "Property": "title"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
