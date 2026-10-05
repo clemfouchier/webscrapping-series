@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "4b4c636635be17ee0110",
   "position": {
-    "x": 47.610349980240933,
-    "y": 168.47931065699493,
+    "x": 47.244457772959009,
+    "y": 168.19026967173409,
     "z": 1000,
     "height": 508.350365637039,
-    "width": 340.16009596530489
+    "width": 323.15209116703966,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "barChart",
@@ -80,42 +81,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8a1223cb4a5bd29c4a97",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_Bigrams"
-              }
-            },
-            "Property": "bigram"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "53da78141601e003400e",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fact_Bigrams"
-                  }
-                },
-                "Property": "count"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

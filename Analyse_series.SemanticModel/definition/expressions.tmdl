@@ -26,7 +26,7 @@ expression src_Bigrams =
 
 expression src_Info_series =
 		let
-		    Source = Csv.Document(File.Contents("C:\Users\CLFO0303\Scripts\webscrapping_series\0_Data\2_Clean\info_series.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    Source = Csv.Document(File.Contents("C:\Users\CLFO0303\Scripts\webscrapping_series\0_Data\2_Clean\info_series.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 		    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
 		in
 		    #"En-têtes promus"

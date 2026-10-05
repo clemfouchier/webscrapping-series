@@ -53,6 +53,15 @@ table dim_Info_series
 
 		annotation SummarizationSetBy = Automatic
 
+	column affiche
+		dataType: string
+		lineageTag: 6355ff9d-754f-4ad2-ace2-1511902770a2
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: affiche
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_Info_series = m
 		mode: import
 		queryGroup: Transformés
