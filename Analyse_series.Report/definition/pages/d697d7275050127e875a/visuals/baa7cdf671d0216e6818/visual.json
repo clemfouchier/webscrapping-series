@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "baa7cdf671d0216e6818",
   "position": {
-    "x": 688.73455298584736,
-    "y": 232.22920262340349,
+    "x": 688.79150190312475,
+    "y": 217.64474137853506,
     "z": 6000,
     "height": 155.87987573351742,
     "width": 520.1297894373489,
@@ -90,5 +90,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "46fbf83f85f0b16c359b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "notes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d4f900347b20eefae57d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_Comments"
+                  }
+                },
+                "Property": "review_id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

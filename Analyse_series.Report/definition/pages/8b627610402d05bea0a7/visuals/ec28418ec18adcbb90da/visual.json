@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "96987ccd217aaee772ee",
+  "name": "ec28418ec18adcbb90da",
   "position": {
-    "x": 795.59666889662969,
-    "y": 62.3626842603059,
-    "z": 8000,
-    "height": 226.77339731020325,
-    "width": 175.74938291540752,
-    "tabOrder": 8000
+    "x": 683.06990881458989,
+    "y": 154.92401215805464,
+    "z": 11002,
+    "height": 226.62613981762919,
+    "width": 176.048632218845,
+    "tabOrder": 11002
   },
   "visual": {
     "visualType": "simpleImageEBC4593F96F1425FB3D84C5BF02B5075",
@@ -38,7 +38,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "75c034328a0067d76bb7",
+        "name": "321dabfa52cd5cd7e522",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -46,44 +47,54 @@
                 "Entity": "dim_Info_series"
               }
             },
-            "Property": "title"
+            "Property": "affiche"
           }
         },
-        "type": "Categorical",
+        "type": "Categorical"
+      },
+      {
+        "name": "fa85eda4e1d3145593cb",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Choix série 2"
+              }
+            },
+            "Property": "Serie N°2"
+          }
+        },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "d",
-              "Entity": "dim_Info_series",
+              "Name": "c",
+              "Entity": "Choix série 2",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "title"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'King & Conqueror'"
+                "Comparison": {
+                  "ComparisonKind": 2,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "c"
                         }
-                      }
-                    ]
-                  ]
+                      },
+                      "Property": "Serie N°2"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
                 }
               }
             }
@@ -91,6 +102,7 @@
         },
         "howCreated": "User"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

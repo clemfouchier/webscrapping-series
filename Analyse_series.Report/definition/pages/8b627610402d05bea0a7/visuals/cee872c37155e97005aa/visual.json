@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "cee872c37155e97005aa",
   "position": {
-    "x": 97.0086103485663,
-    "y": 505.20075434266073,
+    "x": 210.0911854103343,
+    "y": 568.26747720364745,
     "z": 3000,
-    "height": 151.18226487346882,
-    "width": 385.51477542734551,
+    "height": 151.73252279635258,
+    "width": 385.16717325227967,
     "tabOrder": 2000
   },
   "visual": {
@@ -171,53 +171,93 @@
         "type": "Advanced"
       },
       {
-        "name": "5a4489a6c562dcfe9be0",
+        "name": "9bf4188020fb4cb6a656",
         "ordinal": 2,
         "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Info_series"
+          "Arithmetic": {
+            "Left": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_Comments"
+                      }
+                    },
+                    "Property": "review_id"
+                  }
+                },
+                "Function": 5
               }
             },
-            "Property": "title"
+            "Right": {
+              "ScopedEval": {
+                "Expression": {
+                  "Aggregation": {
+                    "Expression": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_Comments"
+                          }
+                        },
+                        "Property": "review_id"
+                      }
+                    },
+                    "Function": 5
+                  }
+                },
+                "Scope": []
+              }
+            },
+            "Operator": 3
           }
         },
-        "type": "Categorical",
+        "type": "Advanced"
+      },
+      {
+        "name": "7e5278a4abaf0e5d6060",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Choix série 1"
+              }
+            },
+            "Property": "Serie N°1"
+          }
+        },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "d",
-              "Entity": "dim_Info_series",
+              "Name": "c",
+              "Entity": "Choix série 1",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "title"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'A Knight of the Seven Kingdoms'"
+                "Comparison": {
+                  "ComparisonKind": 2,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "c"
                         }
-                      }
-                    ]
-                  ]
+                      },
+                      "Property": "Serie N°1"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
                 }
               }
             }

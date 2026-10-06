@@ -1,0 +1,31 @@
+table 'Choix série 1'
+	lineageTag: ad1738bb-a416-485d-9832-e0657e857e49
+
+	measure 'Serie N°1' = ```
+			
+			
+			 VAR Choix_serie_1 = SELECTEDVALUE('Choix série 1'[title])
+			
+			 RETURN 
+			    IF(
+			        SELECTEDVALUE(dim_Info_series[title]) = Choix_serie_1, 1, 0
+			 )
+			    
+			```
+		formatString: 0
+		lineageTag: 2eadbd26-869c-4bc4-88c0-691840deebe4
+
+	column title
+		lineageTag: 5af11511-e4e2-4f00-a63b-02b5542fd988
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dim_Info_series[title]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Choix série 1' = calculated
+		mode: import
+		source = DISTINCT(dim_Info_series[title])
+
+	annotation PBI_Id = 3f3fc8c0e9244c738b23e8ddee28cdf8
+

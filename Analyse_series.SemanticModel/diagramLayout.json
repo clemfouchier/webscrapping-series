@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 707.4999866126177,
-            "y": 227.03105018719245
+            "y": 584.362493647772
           },
           "nodeIndex": "dim_Comments",
           "nodeLineageTag": "56d9d662-2a3c-425c-ae79-ca2dc9b05b3f",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 33.182124119594221,
-            "y": 255.9763860654412
+            "y": 613.30782952602067
           },
           "nodeIndex": "dim_Info_series",
           "nodeLineageTag": "e73f9fdc-fcc0-4c1c-b37a-889a4de95fb6",
@@ -37,12 +37,38 @@
         {
           "location": {
             "x": 377.08093775028595,
-            "y": 200.41722248275008
+            "y": 557.74866594332957
           },
           "nodeIndex": "fact_Bigrams",
           "nodeLineageTag": "003773d7-7bf7-4c82-88c9-35fdd2ae431f",
           "size": {
             "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 593.31449717748694,
+            "y": 227.2037783068514
+          },
+          "nodeIndex": "Choix série 1",
+          "nodeLineageTag": "ad1738bb-a416-485d-9832-e0657e857e49",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 863.093586840518,
+            "y": 231.8926477974392
+          },
+          "nodeIndex": "Choix série 2",
+          "nodeLineageTag": "6d2eb273-2661-4ce7-9603-be5eb12e23ff",
+          "size": {
+            "height": 145,
             "width": 234
           },
           "zIndex": 0

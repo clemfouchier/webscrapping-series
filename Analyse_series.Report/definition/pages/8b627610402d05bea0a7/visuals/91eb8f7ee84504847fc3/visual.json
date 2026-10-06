@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "91eb8f7ee84504847fc3",
   "position": {
-    "x": 98.268472167754737,
-    "y": 56.693349327550813,
+    "x": 70.030395136778125,
+    "y": 147.84194528875381,
     "z": 7000,
-    "height": 226.77339731020325,
-    "width": 175.74938291540752,
+    "height": 212.03647416413375,
+    "width": 163.40425531914894,
     "tabOrder": 7000
   },
   "visual": {
@@ -38,7 +38,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "75c034328a0067d76bb7",
+        "name": "0849e57ebe2572c61268",
         "field": {
           "Column": {
             "Expression": {
@@ -46,44 +46,53 @@
                 "Entity": "dim_Info_series"
               }
             },
-            "Property": "title"
+            "Property": "affiche"
           }
         },
-        "type": "Categorical",
+        "type": "Categorical"
+      },
+      {
+        "name": "fe3de494a15c31b4d568",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Choix série 1"
+              }
+            },
+            "Property": "Serie N°1"
+          }
+        },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "d",
-              "Entity": "dim_Info_series",
+              "Name": "c",
+              "Entity": "Choix série 1",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "title"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'A Knight of the Seven Kingdoms'"
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "c"
                         }
-                      }
-                    ]
-                  ]
+                      },
+                      "Property": "Serie N°1"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
                 }
               }
             }

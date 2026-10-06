@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "c53e7a018288eec469dd",
   "position": {
-    "x": 323.15209116703966,
-    "y": 56.693349327550813,
+    "x": 38.90577507598784,
+    "y": 412.40121580547117,
     "z": 6000,
-    "height": 111.49692034418327,
-    "width": 158.74137811714229,
+    "height": 103.10030395136779,
+    "width": 142.97872340425533,
     "tabOrder": 5000
   },
   "visual": {
@@ -86,58 +86,19 @@
         "type": "Advanced"
       },
       {
-        "name": "fcc2fc08ba42f7dc3317",
+        "name": "0e4048b9c18ee8b919e3",
         "ordinal": 1,
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dim_Info_series"
+                "Entity": "Choix série 1"
               }
             },
-            "Property": "title"
+            "Property": "Serie N°1"
           }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "dim_Info_series",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "title"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'A Knight of the Seven Kingdoms'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
+        "type": "Advanced",
         "howCreated": "User"
       }
     ],

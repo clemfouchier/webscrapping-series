@@ -25,6 +25,8 @@ annotation PBI_QueryOrder = ["src_Comments","src_Bigrams","src_Info_series","dim
 ref table dim_Comments
 ref table fact_Bigrams
 ref table dim_Info_series
+ref table 'Choix série 1'
+ref table 'Choix série 2'
 
 ref cultureInfo fr-FR
 
