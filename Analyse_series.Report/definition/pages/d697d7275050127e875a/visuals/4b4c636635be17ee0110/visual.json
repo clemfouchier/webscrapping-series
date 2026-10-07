@@ -3,11 +3,11 @@
   "name": "4b4c636635be17ee0110",
   "position": {
     "x": 47.244457772959009,
-    "y": 168.19026967173409,
+    "y": 200.19026967173409,
     "z": 1000,
     "height": 508.350365637039,
     "width": 323.15209116703966,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "barChart",
@@ -81,42 +81,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "eb065a94ac525e1ed6ce",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_Bigrams"
-              }
-            },
-            "Property": "bigram"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "21a497239026fea1b06d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fact_Bigrams"
-                  }
-                },
-                "Property": "count"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

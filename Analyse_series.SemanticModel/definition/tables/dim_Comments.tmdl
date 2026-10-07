@@ -3,7 +3,6 @@ table dim_Comments
 
 	column allocine_id
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: d4bee9da-905d-49fe-b24f-d11d7ea7b1d1
 		summarizeBy: none

@@ -3,11 +3,11 @@
   "name": "83e50d134000ab2b93ba",
   "position": {
     "x": 421.78645554207628,
-    "y": 397.14248627811656,
+    "y": 429.14248627811656,
     "z": 0,
     "height": 279.68719001591734,
     "width": 803.15578214030324,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "tableEx",
@@ -168,65 +168,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "19103095645e6c3840bf",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Info_series"
-              }
-            },
-            "Property": "title"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cc2f5d1e14e9ef77dec0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "avis"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ec6b67a72381c0b1910f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "notes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c646735993bb2d4baa4b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "sentiment"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

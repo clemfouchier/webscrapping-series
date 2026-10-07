@@ -3,11 +3,11 @@
   "name": "baa7cdf671d0216e6818",
   "position": {
     "x": 688.79150190312475,
-    "y": 217.64474137853506,
+    "y": 249.64474137853506,
     "z": 6000,
     "height": 155.87987573351742,
     "width": 520.1297894373489,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "columnChart",
@@ -90,42 +90,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "46fbf83f85f0b16c359b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "notes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d4f900347b20eefae57d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_Comments"
-                  }
-                },
-                "Property": "review_id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

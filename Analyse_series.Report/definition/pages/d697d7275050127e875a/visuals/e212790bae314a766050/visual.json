@@ -3,11 +3,11 @@
   "name": "e212790bae314a766050",
   "position": {
     "x": 419.36181457026157,
-    "y": 64.497488375045648,
+    "y": 88.497488375045648,
     "z": 5000,
     "height": 105.82758541142819,
     "width": 366.61699231816192,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -76,23 +76,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0651dfab5ec4545fbcf8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "notes"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
