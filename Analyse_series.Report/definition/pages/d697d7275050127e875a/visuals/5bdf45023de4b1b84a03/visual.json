@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "5bdf45023de4b1b84a03",
   "position": {
-    "x": 835.113042972301,
-    "y": 88.497488375045648,
+    "x": 842,
+    "y": 88,
     "z": 4000,
-    "height": 105.82758541142819,
-    "width": 366.61699231816192,
+    "height": 112,
+    "width": 378,
     "tabOrder": 1000
   },
   "visual": {
@@ -73,8 +73,81 @@
             }
           }
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Filtrer selon le score de sentiment'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b5a4521edee5962ea527",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "sentiment"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

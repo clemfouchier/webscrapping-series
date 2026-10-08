@@ -8,8 +8,3 @@ relationship AutoDetected_30a7e895-6d8c-4568-8285-04165556670b
 	fromColumn: fact_Bigrams.review_id
 	toColumn: dim_Comments.review_id
 
-relationship a6f56f11-ebf0-524d-b51c-227b0388b665
-	isActive: false
-	fromColumn: dim_Comments.allocine_id
-	toColumn: dim_Info_series.allocine_id
-

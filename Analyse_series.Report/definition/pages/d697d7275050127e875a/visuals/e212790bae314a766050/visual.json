@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "e212790bae314a766050",
   "position": {
-    "x": 419.36181457026157,
-    "y": 88.497488375045648,
+    "x": 438,
+    "y": 88,
     "z": 5000,
-    "height": 105.82758541142819,
-    "width": 366.61699231816192,
+    "height": 112,
+    "width": 366,
     "tabOrder": 2000
   },
   "visual": {
@@ -73,8 +73,81 @@
             }
           }
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Filtrer selon la note donnée'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "70c2bb626515b23e9f77",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "notes"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

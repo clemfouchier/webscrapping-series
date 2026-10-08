@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "baa7cdf671d0216e6818",
   "position": {
-    "x": 688.79150190312475,
-    "y": 249.64474137853506,
+    "x": 662,
+    "y": 262,
     "z": 6000,
-    "height": 155.87987573351742,
-    "width": 520.1297894373489,
+    "height": 156,
+    "width": 564,
     "tabOrder": 4000
   },
   "visual": {
@@ -36,22 +36,47 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
+                "Arithmetic": {
+                  "Left": {
+                    "Aggregation": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_Comments"
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "dim_Comments"
+                            }
+                          },
+                          "Property": "review_id"
                         }
                       },
-                      "Property": "review_id"
+                      "Function": 5
                     }
                   },
-                  "Function": 5
+                  "Right": {
+                    "ScopedEval": {
+                      "Expression": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_Comments"
+                                }
+                              },
+                              "Property": "review_id"
+                            }
+                          },
+                          "Function": 5
+                        }
+                      },
+                      "Scope": []
+                    }
+                  },
+                  "Operator": 3
                 }
               },
               "queryRef": "CountNonNull(dim_Comments.review_id)",
-              "nativeQueryRef": "Nombre de review_id"
+              "nativeQueryRef": "%TG Nombre de review_id"
             }
           ]
         }
@@ -84,11 +109,168 @@
                   "Value": "'Categorical'"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribution des notes données'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1c99817fd9d11d313f1e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "notes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3155b7311bd5e9367c14",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_Comments"
+                  }
+                },
+                "Property": "review_id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "4e76666547da576c3346",
+        "field": {
+          "Arithmetic": {
+            "Left": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_Comments"
+                      }
+                    },
+                    "Property": "review_id"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "Right": {
+              "ScopedEval": {
+                "Expression": {
+                  "Aggregation": {
+                    "Expression": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_Comments"
+                          }
+                        },
+                        "Property": "review_id"
+                      }
+                    },
+                    "Function": 5
+                  }
+                },
+                "Scope": []
+              }
+            },
+            "Operator": 3
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "83e50d134000ab2b93ba",
   "position": {
-    "x": 421.78645554207628,
+    "x": 439.78645554207628,
     "y": 429.14248627811656,
     "z": 0,
     "height": 279.68719001591734,
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_Info_series.title",
-              "nativeQueryRef": "title"
+              "nativeQueryRef": "Séries",
+              "displayName": "Séries"
             },
             {
               "field": {
@@ -41,7 +42,8 @@
                 }
               },
               "queryRef": "dim_Comments.avis",
-              "nativeQueryRef": "avis"
+              "nativeQueryRef": "Commentaires",
+              "displayName": "Commentaires"
             },
             {
               "field": {
@@ -55,7 +57,8 @@
                 }
               },
               "queryRef": "dim_Comments.notes",
-              "nativeQueryRef": "notes"
+              "nativeQueryRef": "Notes",
+              "displayName": "Notes"
             },
             {
               "field": {
@@ -69,7 +72,8 @@
                 }
               },
               "queryRef": "dim_Comments.sentiment",
-              "nativeQueryRef": "sentiment"
+              "nativeQueryRef": "Scores de Sentiment",
+              "displayName": "Scores de Sentiment"
             }
           ]
         }
@@ -113,7 +117,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "462.87813798610034D"
+                  "Value": "408.8622524946909D"
                 }
               }
             }
@@ -127,7 +131,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "89.43355085766203D"
+                  "Value": "157.19795726104988D"
                 }
               }
             }
@@ -141,7 +145,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "77.07821072559513D"
+                  "Value": "63.09145668173376D"
                 }
               }
             }
@@ -159,7 +163,20 @@
             "name": {
               "expr": {
                 "Literal": {
-                  "Value": "'Condensed'"
+                  "Value": "'ContrastAlternatingRows'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -168,5 +185,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "86e411833407a27b4ffc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Info_series"
+              }
+            },
+            "Property": "title"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9f53329670cb1959b192",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "avis"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f9513755596efc97a0d0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "notes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5903893bf27b90108eed",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Comments"
+              }
+            },
+            "Property": "sentiment"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

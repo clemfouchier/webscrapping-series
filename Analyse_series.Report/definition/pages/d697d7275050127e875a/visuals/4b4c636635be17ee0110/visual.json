@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "4b4c636635be17ee0110",
   "position": {
-    "x": 47.244457772959009,
-    "y": 200.19026967173409,
+    "x": 66,
+    "y": 200,
     "z": 1000,
-    "height": 508.350365637039,
-    "width": 323.15209116703966,
+    "height": 508,
+    "width": 348,
     "tabOrder": 5000
   },
   "visual": {
@@ -36,22 +36,47 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
+                "Arithmetic": {
+                  "Left": {
+                    "Aggregation": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact_Bigrams"
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_Bigrams"
+                            }
+                          },
+                          "Property": "count"
                         }
                       },
-                      "Property": "count"
+                      "Function": 0
                     }
                   },
-                  "Function": 0
+                  "Right": {
+                    "ScopedEval": {
+                      "Expression": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "fact_Bigrams"
+                                }
+                              },
+                              "Property": "count"
+                            }
+                          },
+                          "Function": 0
+                        }
+                      },
+                      "Scope": []
+                    }
+                  },
+                  "Operator": 3
                 }
               },
               "queryRef": "Sum(fact_Bigrams.count)",
-              "nativeQueryRef": "Somme de count"
+              "nativeQueryRef": "%TG Somme de count"
             }
           ]
         }
@@ -60,18 +85,43 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
+              "Arithmetic": {
+                "Left": {
+                  "Aggregation": {
                     "Expression": {
-                      "SourceRef": {
-                        "Entity": "fact_Bigrams"
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "fact_Bigrams"
+                          }
+                        },
+                        "Property": "count"
                       }
                     },
-                    "Property": "count"
+                    "Function": 0
                   }
                 },
-                "Function": 0
+                "Right": {
+                  "ScopedEval": {
+                    "Expression": {
+                      "Aggregation": {
+                        "Expression": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "fact_Bigrams"
+                              }
+                            },
+                            "Property": "count"
+                          }
+                        },
+                        "Function": 0
+                      }
+                    },
+                    "Scope": []
+                  }
+                },
+                "Operator": 3
               }
             },
             "direction": "Descending"
@@ -79,6 +129,123 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TOP Termes qui reviennent le plus'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cliquer pour filtrer les verbatims'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }
