@@ -4,12 +4,28 @@
   "position": {
     "x": 70,
     "y": 20,
-    "z": 6002,
+    "z": 7000,
     "height": 46,
-    "width": 302
+    "width": 302,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "pageNavigator",
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "howCreated": "InsertVisualButton"

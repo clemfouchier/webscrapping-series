@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "baa7cdf671d0216e6818",
   "position": {
-    "x": 662,
-    "y": 262,
-    "z": 6000,
-    "height": 156,
-    "width": 564,
-    "tabOrder": 4000
+    "x": 680,
+    "y": 261.42857142857144,
+    "z": 5000,
+    "height": 157.14285714285714,
+    "width": 545.71428571428578,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "columnChart",
@@ -194,20 +194,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "1c99817fd9d11d313f1e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "notes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "3155b7311bd5e9367c14",
         "field": {
           "Aggregation": {
@@ -226,50 +212,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "4e76666547da576c3346",
-        "field": {
-          "Arithmetic": {
-            "Left": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_Comments"
-                      }
-                    },
-                    "Property": "review_id"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "Right": {
-              "ScopedEval": {
-                "Expression": {
-                  "Aggregation": {
-                    "Expression": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "dim_Comments"
-                          }
-                        },
-                        "Property": "review_id"
-                      }
-                    },
-                    "Function": 5
-                  }
-                },
-                "Scope": []
-              }
-            },
-            "Operator": 3
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

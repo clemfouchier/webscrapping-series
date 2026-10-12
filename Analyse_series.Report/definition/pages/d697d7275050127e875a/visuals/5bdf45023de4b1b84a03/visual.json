@@ -4,10 +4,9 @@
   "position": {
     "x": 842,
     "y": 88,
-    "z": 4000,
+    "z": 3000,
     "height": 112,
-    "width": 378,
-    "tabOrder": 1000
+    "width": 378
   },
   "visual": {
     "visualType": "slicer",
@@ -131,23 +130,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b5a4521edee5962ea527",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "sentiment"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

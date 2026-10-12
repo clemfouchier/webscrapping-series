@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "c53e7a018288eec469dd",
+  "name": "212a5a59b67e3f664563",
   "position": {
-    "x": 57.830540668882705,
-    "y": 396.99884675395157,
-    "z": 4000,
-    "height": 121.91303168034733,
-    "width": 179.74357234923005,
-    "tabOrder": 4000
+    "x": 69,
+    "y": 84,
+    "z": 16000,
+    "height": 59,
+    "width": 155,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "card",
@@ -25,14 +25,14 @@
                           "Entity": "dim_Comments"
                         }
                       },
-                      "Property": "notes"
+                      "Property": "allocine_id"
                     }
                   },
-                  "Function": 1
+                  "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(dim_Comments.notes)",
-              "nativeQueryRef": "Moyenne de notes"
+              "queryRef": "CountNonNull(dim_Comments.allocine_id)",
+              "nativeQueryRef": "Nombre de allocine_id"
             }
           ]
         }
@@ -49,10 +49,10 @@
                         "Entity": "dim_Comments"
                       }
                     },
-                    "Property": "notes"
+                    "Property": "allocine_id"
                   }
                 },
-                "Function": 1
+                "Function": 5
               }
             },
             "direction": "Descending"
@@ -65,24 +65,17 @@
       "labels": [
         {
           "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
             "fontFamily": {
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "40D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
                 }
               }
             }
@@ -104,19 +97,6 @@
       ]
     },
     "visualContainerObjects": {
-      "border": [
-        {
-          "properties": {
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
@@ -130,7 +110,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Note moyenne'"
+                  "Value": "'Nb commentaires'"
                 }
               }
             },
@@ -141,10 +121,23 @@
                 }
               }
             },
-            "alignment": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -157,28 +150,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6d3e92615a4df643d0a9",
-        "ordinal": 0,
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_Comments"
-                  }
-                },
-                "Property": "notes"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a1bf1f197a867022c2fe",
-        "ordinal": 1,
+        "name": "ccf80c0b9c8840d9a144",
         "field": {
           "Column": {
             "Expression": {
@@ -231,7 +203,6 @@
         },
         "howCreated": "User"
       }
-    ],
-    "filterSortOrder": "Custom"
+    ]
   }
 }

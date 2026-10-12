@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "e31e69de7d5e88f3276b",
   "position": {
-    "x": 782,
-    "y": 84,
-    "z": 13001,
+    "x": 870,
+    "y": 89,
+    "z": 10000,
     "height": 48,
-    "width": 386,
-    "tabOrder": 13001
+    "width": 360,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "textbox",
@@ -21,6 +21,7 @@
                   {
                     "value": "King & Conqueror",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontFamily": "Segoe UI",
                       "fontSize": "16pt"
                     }

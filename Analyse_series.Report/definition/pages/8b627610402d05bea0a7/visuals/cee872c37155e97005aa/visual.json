@@ -6,8 +6,7 @@
     "y": 546,
     "z": 1000,
     "height": 154,
-    "width": 354,
-    "tabOrder": 1000
+    "width": 354
   },
   "visual": {
     "visualType": "ribbonChart",
@@ -178,7 +177,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Distribution du score de sentiment'"
+                  "Value": "'Distribution du score de sentiment (%)'"
                 }
               }
             },

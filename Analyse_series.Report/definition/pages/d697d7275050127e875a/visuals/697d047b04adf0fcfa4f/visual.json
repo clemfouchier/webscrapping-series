@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "8cc1bacf4d3812c08754",
+  "name": "697d047b04adf0fcfa4f",
   "position": {
-    "x": 58,
-    "y": 558,
-    "z": 6000,
-    "height": 124,
-    "width": 180,
-    "tabOrder": 6000
+    "x": 1075.5555555555554,
+    "y": 18.888888888888889,
+    "z": 9000,
+    "height": 60,
+    "width": 155.55555555555554,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -25,14 +25,14 @@
                           "Entity": "dim_Comments"
                         }
                       },
-                      "Property": "sentiment"
+                      "Property": "allocine_id"
                     }
                   },
-                  "Function": 1
+                  "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(dim_Comments.sentiment)",
-              "nativeQueryRef": "Moyenne de sentiment"
+              "queryRef": "CountNonNull(dim_Comments.allocine_id)",
+              "nativeQueryRef": "Nombre de allocine_id"
             }
           ]
         }
@@ -49,10 +49,10 @@
                         "Entity": "dim_Comments"
                       }
                     },
-                    "Property": "sentiment"
+                    "Property": "allocine_id"
                   }
                 },
-                "Function": 1
+                "Function": 5
               }
             },
             "direction": "Descending"
@@ -65,17 +65,10 @@
       "labels": [
         {
           "properties": {
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "40D"
+                  "Value": "18D"
                 }
               }
             },
@@ -104,19 +97,6 @@
       ]
     },
     "visualContainerObjects": {
-      "border": [
-        {
-          "properties": {
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
@@ -130,7 +110,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Score moyen de sentiment'"
+                  "Value": "'Nb commentaires'"
                 }
               }
             },
@@ -138,6 +118,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             },
@@ -150,88 +137,54 @@
             }
           }
         }
-      ]
-    },
-    "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "82c8069c5a2af1981f28",
-        "ordinal": 0,
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_Comments"
-                  }
-                },
-                "Property": "sentiment"
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
               }
             },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fdd0d9dc914be381b6b1",
-        "ordinal": 1,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Info_series"
-              }
-            },
-            "Property": "title"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "dim_Info_series",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "title"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'A Knight of the Seven Kingdoms'"
-                        }
-                      }
-                    ]
-                  ]
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
-          ]
-        },
-        "howCreated": "User"
-      }
-    ],
-    "filterSortOrder": "Custom"
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
   }
 }

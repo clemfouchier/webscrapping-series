@@ -7,7 +7,7 @@
     "z": 0,
     "height": 279.68719001591734,
     "width": 803.15578214030324,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "tableEx",
@@ -185,65 +185,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "86e411833407a27b4ffc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Info_series"
-              }
-            },
-            "Property": "title"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9f53329670cb1959b192",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "avis"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f9513755596efc97a0d0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "notes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5903893bf27b90108eed",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Comments"
-              }
-            },
-            "Property": "sentiment"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
