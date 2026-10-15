@@ -6,7 +6,8 @@
     "y": 546,
     "z": 1000,
     "height": 154,
-    "width": 354
+    "width": 354,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "ribbonChart",

@@ -7,7 +7,7 @@
     "z": 13000,
     "height": 151.66666666666669,
     "width": 196.66666666666669,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Avg(dim_Comments.notes)",
-              "nativeQueryRef": "Moyenne de notes"
+              "nativeQueryRef": "Note moyenne",
+              "displayName": "Note moyenne"
             }
           ]
         }

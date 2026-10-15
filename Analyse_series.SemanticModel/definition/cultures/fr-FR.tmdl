@@ -3024,9 +3024,945 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "dim_comment.marge_erreur_note": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualProperty": "MargeErreur_Note"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "marge erreur note": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MargeErreur_Note": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "marge erreur memo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "marge erreur memorandum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "marge erreur reminder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "marge erreur letter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "marge erreur message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "marge erreur communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "marge erreur annotation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "marge erreur addendum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "marge erreur commentary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "marge erreur footnote": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "dim_comment.marge_erreur_sentiment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualProperty": "MargeErreur_Sentiment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "marge erreur sentiment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MargeErreur_Sentiment": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "marge erreur sentimentality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "marge erreur mawkishness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "marge erreur soppiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "marge erreur romanticism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "marge erreur gush": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "marge erreur corn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "marge erreur emotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "marge erreur response": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "marge erreur reaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "marge erreur attitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ]
+			    },
+			    "dim_comment.borne_inférieure_notes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualProperty": "Borne_inférieure_notes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "borne inférieure notes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Borne_inférieure_notes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "borne inférieure transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne inférieure transcription": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne inférieure résumé": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne inférieure minute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure proceeding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure summary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure follow-ups": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure log": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "dim_comment.borne_supérieure_notes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualProperty": "Borne_supérieure_notes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "borne supérieure notes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Borne_supérieure_notes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "borne supérieure transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne supérieure transcription": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne supérieure résumé": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne supérieure minute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure proceeding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure summary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure follow-ups": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure log": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "dim_comment.borne_inférieure_sentiment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualProperty": "Borne_inférieure_sentiment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "borne inférieure sentiment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Borne_inférieure_sentiment": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "borne inférieure sentimentality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne inférieure mawkishness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne inférieure soppiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne inférieure romanticism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne inférieure gush": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure corn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne inférieure emotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "borne inférieure response": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "borne inférieure reaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "borne inférieure attitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ]
+			    },
+			    "dim_comment.borne_supérieure_sentiment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualProperty": "Borne_supérieure_sentiment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "borne supérieure sentiment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Borne_supérieure_sentiment": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "borne supérieure sentimentality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne supérieure mawkishness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne supérieure soppiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne supérieure romanticism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "borne supérieure gush": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure corn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "borne supérieure emotion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "borne supérieure response": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "borne supérieure reaction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "borne supérieure attitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dim_comment_has_borne_supérieure_sentiment": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_comment": {
+			          "Target": {
+			            "Entity": "dim_comment"
+			          }
+			        },
+			        "dim_comment.borne_supérieure_sentiment": {
+			          "Target": {
+			            "Entity": "dim_comment.borne_supérieure_sentiment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_comment"
+			            },
+			            "Object": {
+			              "Role": "dim_comment.borne_supérieure_sentiment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_comments_have_borne_supérieure_sentiment"
+			        }
+			      ]
+			    },
+			    "dim_comment_has_borne_inférieure_sentiment": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_comment": {
+			          "Target": {
+			            "Entity": "dim_comment"
+			          }
+			        },
+			        "dim_comment.borne_inférieure_sentiment": {
+			          "Target": {
+			            "Entity": "dim_comment.borne_inférieure_sentiment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_comment"
+			            },
+			            "Object": {
+			              "Role": "dim_comment.borne_inférieure_sentiment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_comments_have_borne_inférieure_sentiment"
+			        }
+			      ]
+			    },
+			    "dim_comment_has_borne_supérieure_notes": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_comment": {
+			          "Target": {
+			            "Entity": "dim_comment"
+			          }
+			        },
+			        "dim_comment.borne_supérieure_notes": {
+			          "Target": {
+			            "Entity": "dim_comment.borne_supérieure_notes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_comment"
+			            },
+			            "Object": {
+			              "Role": "dim_comment.borne_supérieure_notes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_comments_have_borne_supérieure_notes"
+			        }
+			      ]
+			    },
+			    "dim_comment_has_borne_inférieure_notes": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_comment": {
+			          "Target": {
+			            "Entity": "dim_comment"
+			          }
+			        },
+			        "dim_comment.borne_inférieure_notes": {
+			          "Target": {
+			            "Entity": "dim_comment.borne_inférieure_notes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_comment"
+			            },
+			            "Object": {
+			              "Role": "dim_comment.borne_inférieure_notes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_comments_have_borne_inférieure_notes"
+			        }
+			      ]
+			    },
+			    "dim_comment_has_marge_erreur_sentiment": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_comment": {
+			          "Target": {
+			            "Entity": "dim_comment"
+			          }
+			        },
+			        "dim_comment.marge_erreur_sentiment": {
+			          "Target": {
+			            "Entity": "dim_comment.marge_erreur_sentiment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_comment"
+			            },
+			            "Object": {
+			              "Role": "dim_comment.marge_erreur_sentiment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_comments_have_marge_erreur_sentiment"
+			        }
+			      ]
+			    },
+			    "dim_comment_has_marge_erreur_note": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Comments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_comment": {
+			          "Target": {
+			            "Entity": "dim_comment"
+			          }
+			        },
+			        "dim_comment.marge_erreur_note": {
+			          "Target": {
+			            "Entity": "dim_comment.marge_erreur_note"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_comment"
+			            },
+			            "Object": {
+			              "Role": "dim_comment.marge_erreur_note"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_comments_have_marge_erreur_note"
+			        }
+			      ]
+			    },
 			    "dim_info_series_has_choix_série_2_serie_n2": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_Info_series"
