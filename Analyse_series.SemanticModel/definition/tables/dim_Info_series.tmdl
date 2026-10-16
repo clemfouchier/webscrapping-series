@@ -3,6 +3,7 @@ table dim_Info_series
 
 	column allocine_id
 		dataType: int64
+		isKey
 		formatString: 0
 		lineageTag: f47bf31f-0fc2-4f7f-a34e-310762c15aa8
 		summarizeBy: none

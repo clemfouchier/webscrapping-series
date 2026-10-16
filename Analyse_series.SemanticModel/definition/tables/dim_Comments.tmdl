@@ -64,6 +64,7 @@ table dim_Comments
 
 	column review_id
 		dataType: int64
+		isKey
 		formatString: 0
 		lineageTag: 4dcc3a19-fc1f-4713-b86a-04d2a7238429
 		summarizeBy: none
