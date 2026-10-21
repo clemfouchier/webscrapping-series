@@ -35,7 +35,7 @@ MES LIGNES DIRECTRICES DANS L'UTILISATION DE L'IA :
 - Avant de demander, réfléchir par moi-même à un minimum de 2 hypothèses.
 - Challenger les propositions, et comprendre les raisons derrière chaque choix.
 - Demander des cas génériques anonymisés à reprendre par soi-même.
-- Ne pas injecter les données.
+- Ne pas injecter les données dans le LLM.
 
 En résumé, j'utilise l'IA comme un mentor, avec exigence.
 
@@ -44,8 +44,8 @@ METHODOLOGE
 - Scrapping d'Allociné et Imdb avec BeautifulSoup et Selenium
 - Fusion des données et transformation des données avec pandas
 - Analyse exploratoire des données avec pandas et seaborn
-- Analyse sémantique avec NLKT et scikit-learn
-- Intégration à PowerBI
+- Preprocessing avec pandas puis analyse sémantique avec NLKT et scikit-learn
+- Intégration à PowerBI et construction du rapport
 
 ETAPE PAR ETAPE
 0. Préparation de l'environnement
@@ -55,19 +55,55 @@ ETAPE PAR ETAPE
 4. Analyse Sémantique
 5. Intégration à PowerBI
 
+0. PREPARATION DE L'ENVIRONNEMENT 
+J'ai commencé à utiliser les environnements virtuels via venv. J'ai ensuite essayé la librairie uv, qui est la solution la plus simple pour initialiser les projets et gérer ses environnements virtuels et les dépendances (versions des librairies utilisées).
+
+Documentation ici : https://docs.astral.sh/uv/
+
+L'organisation du suit un cheminement logique entre le stockage de la donnée, le scrapping, le nettoyage/analyse puis l'analyse sémantique.
+
+Voici l'arborescence de manière simplifiée :
+.venv
+0_Data
+    1_Raw
+       data_allocine.csv
+       data_imdb.csv 
+    2_Clean
+        Traitement intermédiaire
+            data_clean.csv
+            data_preprocessed.csv
+        bigrams.csv                     --> Table longue de bigrams (analyse sémantique)
+        data_preprocessed_final.csv     --> Commentaires, notes, et métadonnées
+        info_series.csv                 
+1_Scrapping
+    1_scrapping_allocine.ipynb
+    2_scrapping_imdb.ipynb
+2_Nettoyage_Analyse
+    3_fusion_nettoyage.ipynb
+    4_analyse_exploratoire.ipynb
+3_Analyse_Semantique
+    5_preprocessing.ipynb
+    6_analyse_semantique.ipynb
+Analyse_series.pbip                     --> Fichier PowerBI
+requirements.txt                        --> Librairies utilisées et dépendances.
+
+1. SCRAPPING DES PLATEFORMES
+
+
+
 CONCLUSION
-Projet hautement formateur.
-Nombreuses possibilités d'évolution.
+Entre le début du projet et aujourd'hui, je sens qu'un cap majeur a été franchi dans ma manière d'appréhender le code, et plus globalement les projets data. 
 
-EVOLUTIONS POSSIBLES
-En amont :
-- Organiser le projet sous formes de scripts python vs les notebooks
+Je suis aujourd'hui capable de débuter un projet data proprement en créant l'environnement virtuel associé, d'aller récupérer les données par moi-même selon différentes sources, de les assembler, les transformer, concevoir une solution d'analyse sémantique simple, et d'intégrer tout ce travail dans un rapport PowerBI conçu pour être attractif et facile à utiliser.
+
+Mais ce projet ne s'arrête pas aujourd'hui, les possibilité d'évolution sont nombreuses :
+- Organiser le projet sous formes de scripts python (au lieu des notebooks, pratiques pour explorer les données)
 - Générer une BDD SQL
-- Insérer dans un environnement cloud
-- Automatiser une pipeline de données
-
-Analyse :
+- Insérer les données dans un environnement cloud
+- Automatiser la pipeline de données
 - Aller chercher les données de plus de séries (en restant raisonable)
 - Dans Power BI, pouvoir choisir les deux séries à comparer.
 - Tester de nouvelles techniques d'analyse sémantique / NLP (Deeplearning, thématiques...).
 - Créer une page qui analyse les indicateurs selon les informations dont nous disposons sur les séries (ex : un genre particulier, un acteur particulier, une nationalité... avec possibilité de croiser)
+
+Je continue à avancer quotidiennement sur ce projet pour le rendre un peu mieu chaque jour avec régularité - la meilleure façon d'avancer.
