@@ -52,7 +52,7 @@ ETAPE PAR ETAPE
 1. Scrapping de deux plateformes différentes
 2. Fusion et transformation des données
 3. Analyse exploratoire
-4. Analyse Sémantique
+4. Analyse sémantique
 5. Intégration à PowerBI
 
 0. PREPARATION DE L'ENVIRONNEMENT 
@@ -151,20 +151,124 @@ Ce fichier est enregistré ici :  0_Data/1_Raw/data_imdb.csv
 
 2. FUSION ET TRANSFORMATION DES DONNEES
 
+Dans le notebook 2_Nettoyage_Analyse/3_fusion_nettoyage.ipynb, j'importe les deux fichiers data_allocine.csv et data_imdb.csv.
+
+Ici, je concatène les fichiers, et je réinitialise l'index.
+
+Voici ensuite les transformations que j'effectue :
+- Création d'une colonne note, qui remet toutes les notes à la même échelle de 10 (x2 pour les notes d'Allociné, sur 5). Les colonnes 'notesAllocine' et 'notesImdb' sont ensuite supprimées.
+- Conservation du nom de la plateforme pour Allociné et Imdb.
+- Transformation de la colonne date en format date.
+- Ajouter les 'allocine_id', soit l'id unique par série sur toutes les lignes (en particulier celles qui viennent de la plateforme Imdb).
+- Ajouter le review_id, soit l'identifiant unique par commentaire, sur toutes les lignes (en particulier celles qui viennent de la plateforme Imdb).
+- Transformation du type de données lorsque nécessaire.
+
+Le fichier est exporté à 2_Clean/Traitement_intermediaire/data_clean.csv
+
+3. ANALYSE EXPLORATOIRE
+
+Lors de cette phase, je prends le temps d'analyser les données, leur distribution, le lien entre les variables, et je tire les premiers enseignements.
+
+J'ouvre le fichier 'data_clean.csv' de la dernière phase. Voici les principaux enseignements que l'on peut tirer :
+
+- Les notes données, et donc les moyennes, sont basées ici uniquement sur les personnes qui ont mis un avis. Ce sont donc des spectateurs plus engagés, avec une conviction.
+- 84% des avis proviennent de la plateforme Imdb. Cette dernière note plus favorablement qu'Allocine, plateforme Française.
+- En février 2026, pour la série 'A knight of the Sevent Kingdoms', 60% des notes données sont des 10. Deux hypothèses :
+    1. L'engouement : les épisodes les mieux notés de la série sont sortis en février. Les fans de Game of Thrones ont pu regarder dès la sortie et donner une très bonne note.
+    2. Une opération pour améliorer la note, avec de nombreux avis donnés, a eu lieu.
+- Ayant moi-même vu la série, je pense que l'engouement explique ces notes. Mais, par soucis d'apprentissage, j'ai choisi de donner un poids de 80/100 à ces notes (uniquement valable lors de cette phase).
+
+Voici donc les moyennes pour chaque série avec les intervalles de confiance :
+A Knight of the Seven Kingdoms : 8,11 / 10 [7.96 - 8.26]
+King & Conqueror : 4,38 / 10 [3.98 - 4.79]
+
+Par soucis d'apprentissage, j'ai également calcumé le skew (asymétrie) et le kurtosis (applatissement), qui servent à analyser statistiquement la forme de la distribution.
+
+Nous verrons par la suite comment l'analyse sémantique nous aide à expliquer un tel écart de notation.
+
+4. ANALYSE SEMANTIQUE
+
+J'ai réalisé l'analyse sémantique en deux partie : 3_Analyse_Semantique/5_preprocessing.ipynb
+
+La première partie est le preprocessing. Elle consiste à :
+- Créer des colonnes qui regroupent certaines notes en catégories (3)
+- Identifier des signaux dans les verbatims, appelées métadonnées (points d'exclamations et mots écrits en lettre CAPITALES)
+- Nettoyer les mots inutiles et de la ponctuation.
+- Lemmatiser, soit regrouper les mots qui ont une même racine (ex : trouver, trouve --> 1 seul mot).
+
+Cette phase permet de tirer quelques enseignements :
+- La présence de mots en lettre capitale semble corrélé positivement avec les notes positives. Surtout lorsqu'il y en a au moins 50 dans un même avis.
+- Les points d'exclamation intensifient les avis : on les trouve davantage où il y a des notes positives et négatives. Lorsqu'il y en a plus de 15, c'est un signe que la note est positive.
+- A l'inverse, les points d'interrogration semblent davantage présent pour mettre en cause la série, surtout lorsqu'il y en a beaucoup (10 ou plus)
+
+Le fichier est enregistré ici : /0_Data/2_Clean/Traitement_intermediaire/data_preprocessed.csv
+
+La deuxième partie est consacrée à l'exploration des méthodes d'anayse sémantique : 3_Analyse_Semantique/5_analyse_semantique.ipynb
+
+J'ai essayé les solutions suivantes :
+- Bag of Words : 1 mot = 1 occurence
+- TF-IDF : même principe, mais pondère les mots en fonction de leur rareté dans le corpus.
+- N-2 / Bigrams : décompte les combinaisons de 2 mots (ex : très bien)
+- ANNFIN : Donne un score émotionnel aux mots, et donc un score de sentiment à chaque commentaire
+- Latent Ditriech Allocation (LDA) : trouve les catégories. 
+
+J'ai choisi la méthode qui pondère le poids des mots (TF-IDF) et de n'afficher que les bigrams.
+
+IMAGE BIGRAMS.
+
+A date, je n'ai pas retenu le Latent Ditriech Allocation, car je me suis concentré sur des solutions simples, faciles à comprendre et à utiliser. Mais à l'avenir, je pourrai davantage explorer cette possibilité, tout comme le DeepLearning.
+
+Voici l'analyse que je tire de l'analyse des bigrams :
+A Knight of the Seven Kingdoms :
+- Les verbatims positifs mettent en avant les personnages principaux, et leur développement tout au long de la série.
+- Au contraire, les verbatims négatifs parlent également des personnages principaux, des deux premiers épisodes, du format d'épisodes courts (30 minutes), et du budget qui semble faible pour une série de l'univers de Game of Thrones.
+
+Mes recommandations pour la prochaine saison : continuer sur cette lancée en se concentrant sur le développement des deux personnages. 
+
+King & Conqueror :
+- Les commentaires positifs parlent également de Game of Throne : les spectateurs sont probablement attirés par la ressemblence avec l'univers. Les acteurs Nikolaj Coster Waldau, qui joue Jamie Lannister, et James Norton sont mis en avant. Les spectateurs apprécient l'aspect historique de la série, qu'ils jugent précis, presque à la manière d'un documentaire.
+- Au contraire, les commentaires négatifs remettent fortement en cause la véricité historique de la série. Le premier épisode revient particulièrement dans les commentaires.
+
+Mes recommandations pour la prochaine saison : essayer de se rapprocher davantage des faits historiques. Si des simplifications doivent être effectuées, que ce soit fait en cohérence avec les personnages historiques.
+
+A ce stade, deux fichiers sont enregistrés :
+- '/0_Data/2_Clean/data_preprocessed_final.csv', soit le même fichier qu'avant, mais en ajoutant le score de sentiment par commentaire (via l'algorithme ANNFIN)
+- '/0_Data/2_Clean/bigrams.csv'
+
+Cette dernière consiste en un fichier csv qui compte, pour chaque couple review_id x bigram, le nombre d'occurences du bigram. Il s'agit donc d'un table de faits particulièrement longue.
+
+5. INTEGRATION A POWER BI
+
+A date, j'intègre 3 fichiers, qui deviennent 3 tables.
+- info_series.csv devient la table de dimension dim_Info_series : la table rescence les informations sur les séries (genre, réalisateur...)
+- data_preprocessed_final.csv devient la table de dimension dim_Comments : la table donne les commentaires, la note et les métadonnées.
+- bigrams.csv devient fact_Bigrams : c'est la table longue qui répertorie les bigrams par review_id.
+
+Dans Power Query, je garde la source dans un dossier 'Src', et je réalise les transformations dans un dossier 'Transformés'.
+
+Voici les transformations que je réalise à ce stage (bien légères).
+
+
+SCHEMA MODELE
+
+SCHEMA PREMIERE PAGE
+
+
 
 CONCLUSION
 Entre le début du projet et aujourd'hui, je sens qu'un cap majeur a été franchi dans ma manière d'appréhender le code, et plus globalement les projets data. 
 
-Je suis aujourd'hui capable de débuter un projet data proprement en créant l'environnement virtuel associé, d'aller récupérer les données par moi-même selon différentes sources, de les assembler, les transformer, concevoir une solution d'analyse sémantique simple, et d'intégrer tout ce travail dans un rapport PowerBI conçu pour être attractif et facile à utiliser.
+Je suis aujourd'hui capable de débuter un projet data proprement en créant l'environnement virtuel associé, d'aller récupérer les données par moi-même selon différentes sources, de les assembler, les transformer, concevoir une solution d'analyse sémantique simple, et d'intégrer tout ce travail dans un rapport Power BI conçu pour être attractif et facile à utiliser.
 
 Mais ce projet ne s'arrête pas aujourd'hui, les possibilité d'évolution sont nombreuses :
 - Organiser le projet sous formes de scripts python (au lieu des notebooks, pratiques pour explorer les données)
 - Générer une BDD SQL
 - Insérer les données dans un environnement cloud
 - Automatiser la pipeline de données
-- Aller chercher les données de plus de séries (en restant raisonable)
+- Aller chercher les données de plus de séries (en restant raisonable, 5 à 10 maximum)
 - Dans Power BI, pouvoir choisir les deux séries à comparer.
 - Tester de nouvelles techniques d'analyse sémantique / NLP (Deeplearning, thématiques...).
 - Créer une page qui analyse les indicateurs selon les informations dont nous disposons sur les séries (ex : un genre particulier, un acteur particulier, une nationalité... avec possibilité de croiser)
+- Créer une page qui analyse les données selon les métadonnées (ex : nombre de mots en lettre capitale, de points d'exclamation, d'interrogation...)
 
-Je continue à avancer quotidiennement sur ce projet pour le rendre un peu mieu chaque jour avec régularité - la meilleure façon d'avancer.
+Je continue à avancer quotidiennement sur ce projet pour le rendre un peu meilleur chaque jour avec régularité.
