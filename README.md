@@ -21,7 +21,7 @@ Statut : projet en cours.
 - Négatif : les 2 premiers épisodes, la durée des épisodes (30 minutes), et un budget relativement faible pour une série de l'univers de Game of Thrones.
 - Piste d'amélioration : continuer sur la lancée des derniers épisodes !
 
-Nota Bene : il est probable que la série a été porté par un fort engouement : **60% des notes en février sur IMDb sont des 10**. Ce mois correspond à la sortie des épisodes 3, 4, 5 et 6. Une opération de notation n'est pas totalement à exclure non plus.
+Nota Bene : il est probable que la série ait été portée par un fort engouement : **60% des notes en février sur IMDb sont des 10**. Ce mois correspond à la sortie des épisodes 3, 4, 5 et 6. Une opération de notation n'est pas totalement à exclure non plus.
 
 **King & Conqueror**
 - Moyenne : 4,5 / 10 - [4,0 - 4,9], n = 158
