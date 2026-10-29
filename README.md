@@ -13,9 +13,9 @@ Statut : projet en cours.
 ![Aperçu de la page analyse du Power BI](docs/img/PowerBI_analyse.png)
 
 ## Analyse
-En bref : pour A Knight of the Seven Kingdoms, les avis positifs portent sur l’évolution des personnages, les négatifs sur les deux premiers épisodes et le format court. Pour King & Conqueror, la ressemblance avec Game of Thrones attire, mais la véracité historique est critiquée.
+**En bref** : pour A Knight of the Seven Kingdoms, les avis positifs portent sur l’évolution des personnages, les négatifs sur les deux premiers épisodes et le format court. Pour King & Conqueror, la ressemblance avec Game of Thrones attire, mais la véracité historique est critiquée.
 
-A Knight of the Seven Kingdoms (ma série préférée de 2026 !) :
+**A Knight of the Seven Kingdoms** (ma série préférée de 2026 !)
 - Moyenne : 8,4 / 10 - [8,3 - 8,6], n = 1 093
 - Positif : l'évolution des personnages principaux 
 - Négatif : les 2 premiers épisodes, la durée des épisodes (30 minutes), et un budget relativement faible pour une série de l'univers de Game of Thrones.
@@ -23,7 +23,7 @@ A Knight of the Seven Kingdoms (ma série préférée de 2026 !) :
 
 Nota Bene : il est probable que la série a été porté par un fort engouement : **60% des notes en février sur IMDb sont des 10**. Ce mois correspond à la sortie des épisodes 3, 4, 5 et 6. Une opération de notation n'est pas totalement à exclure non plus.
 
-King & Conqueror :
+**King & Conqueror**
 - Moyenne : 4,5 / 10 - [4,0 - 4,9], n = 158
 - Positif : similarité avec l'univers de Game of Thrones (notamment les acteurs)  
 - Négatif : manque de véracité historique, en particulier le premier épisode
@@ -48,7 +48,7 @@ Concernant le NLP, le choix du couple TF-IDF - bigrams a été adopté pour priv
 - Seules les notes des spectateurs qui laissent un commentaire sont retenues, traduisant un engagement fort
 - 84 % des avis viennent d'IMDb (notation plus généreuse qu'Allociné)
 - Scraping d'IMDb n'est plus possible via Selenium aujourd'hui sans passer par la création d'un compte. Le notebook à ce sujet n'est donc pas reproductible.
-- Les données récoltées sur Allociné et IMDb ne peuvent pas être partagées pour des raisons juridiques
+- Les données récoltées sur Allociné et IMDb ne peuvent pas être partagées pour des raisons juridiques.
 - NLP sur les commentaires en anglais, car plus nombreux. Les commentaires d'Allociné sont donc exclus de l'analyse sémantique.
 
 ## Prochains développements : ma feuille de route
