@@ -27,6 +27,7 @@ ref table fact_Bigrams
 ref table dim_Info_series
 ref table 'Choix série 1'
 ref table 'Choix série 2'
+ref table 'Table de mesure'
 
 ref cultureInfo fr-FR
 

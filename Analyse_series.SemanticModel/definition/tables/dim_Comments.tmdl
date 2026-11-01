@@ -1,56 +1,6 @@
 table dim_Comments
 	lineageTag: 56d9d662-2a3c-425c-ae79-ca2dc9b05b3f
 
-	measure MargeErreur_Note =
-			
-			VAR Alpha = 0.05
-			VAR TailleEchantillon = COUNT(dim_Comments[notes])
-			VAR EcartType = STDEV.P(dim_Comments[notes])
-			
-			RETURN CONFIDENCE.T(Alpha, EcartType, TailleEchantillon)
-		lineageTag: 1cb7923f-a4d4-4345-91fe-e2203cad0a6b
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure MargeErreur_Sentiment =
-			
-			VAR Alpha = 0.05
-			VAR TailleEchantillon = COUNT(dim_Comments[sentiment])
-			VAR EcartType = STDEV.P(dim_Comments[sentiment])
-			
-			RETURN CONFIDENCE.T(Alpha, EcartType, TailleEchantillon)
-		lineageTag: 07aef754-487d-4552-b25e-ea2a99b6d8c4
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Borne_inférieure_notes =
-			
-			AVERAGE(dim_Comments[notes]) - [MargeErreur_Note]
-		lineageTag: 2c764600-c1d2-48b4-b60b-c48f7803349c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Borne_supérieure_notes =
-			
-			AVERAGE(dim_Comments[notes]) + [MargeErreur_Note]
-		lineageTag: a233a4be-472c-4b61-9c36-b8d88c818491
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Borne_inférieure_sentiment =
-			
-			AVERAGE(dim_Comments[sentiment]) - [MargeErreur_Note]
-		lineageTag: 2bfe0ed9-94e9-41dd-81eb-7e4a821a68b2
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Borne_supérieure_sentiment =
-			
-			AVERAGE(dim_Comments[sentiment]) + [MargeErreur_Note]
-		lineageTag: 5ae69074-42db-43ab-97a2-728f4c2f5364
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column allocine_id
 		dataType: int64
 		formatString: 0

@@ -277,7 +277,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_Comments"
+                      "Entity": "Table de mesure"
                     }
                   },
                   "Property": "Borne_supérieure_notes"
@@ -320,7 +320,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_Comments"
+                      "Entity": "Table de mesure"
                     }
                   },
                   "Property": "Borne_inférieure_notes"

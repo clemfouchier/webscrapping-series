@@ -4,19 +4,19 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 47.403034456563184,
-        "y": 538.28777519979747
+        "x": 0,
+        "y": 416.7655020775104
       },
       "nodes": [
         {
           "location": {
-            "x": 694.85917742420077,
-            "y": 723.41139472035729
+            "x": 726.63869614270141,
+            "y": 619.85323424614342
           },
           "nodeIndex": "dim_Comments",
           "nodeLineageTag": "56d9d662-2a3c-425c-ae79-ca2dc9b05b3f",
           "size": {
-            "height": 300,
+            "height": 568.13968918734906,
             "width": 234
           },
           "zIndex": 3
@@ -24,12 +24,12 @@
         {
           "location": {
             "x": 33.182124119594221,
-            "y": 613.30782952602067
+            "y": 726.90971867944631
           },
           "nodeIndex": "dim_Info_series",
           "nodeLineageTag": "e73f9fdc-fcc0-4c1c-b37a-889a4de95fb6",
           "size": {
-            "height": 224,
+            "height": 281.60037767728238,
             "width": 234
           },
           "zIndex": 4
@@ -37,12 +37,12 @@
         {
           "location": {
             "x": 377.08093775028595,
-            "y": 557.74866594332957
+            "y": 671.35055509675522
           },
           "nodeIndex": "fact_Bigrams",
           "nodeLineageTag": "003773d7-7bf7-4c82-88c9-35fdd2ae431f",
           "size": {
-            "height": 176,
+            "height": 213.73817847821954,
             "width": 234
           },
           "zIndex": 5
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 593.31449717748694,
-            "y": 227.2037783068514
+            "y": 340.80566746027711
           },
           "nodeIndex": "Choix série 1",
           "nodeLineageTag": "ad1738bb-a416-485d-9832-e0657e857e49",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 863.093586840518,
-            "y": 231.8926477974392
+            "y": 345.49453695086493
           },
           "nodeIndex": "Choix série 2",
           "nodeLineageTag": "6d2eb273-2661-4ce7-9603-be5eb12e23ff",
@@ -72,10 +72,23 @@
             "width": 234
           },
           "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 341.271913877377,
+            "y": 930.77116723674646
+          },
+          "nodeIndex": "Table de mesure",
+          "nodeLineageTag": "fab115f6-104d-4ac8-976c-2c87afacc27c",
+          "size": {
+            "height": 265.54525735690754,
+            "width": 234
+          },
+          "zIndex": 6
         }
       ],
       "name": "Toutes les tables",
-      "zoomValue": 63.287087723234038,
+      "zoomValue": 50.346892102823141,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

@@ -3028,7 +3028,7 @@ cultureInfo fr-FR
 			    "dim_comment.marge_erreur_note": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualEntity": "Table de mesure",
 			          "ConceptualProperty": "MargeErreur_Note"
 			        }
 			      },
@@ -3151,7 +3151,7 @@ cultureInfo fr-FR
 			    "dim_comment.marge_erreur_sentiment": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualEntity": "Table de mesure",
 			          "ConceptualProperty": "MargeErreur_Sentiment"
 			        }
 			      },
@@ -3274,7 +3274,7 @@ cultureInfo fr-FR
 			    "dim_comment.borne_inférieure_notes": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualEntity": "Table de mesure",
 			          "ConceptualProperty": "Borne_inférieure_notes"
 			        }
 			      },
@@ -3397,7 +3397,7 @@ cultureInfo fr-FR
 			    "dim_comment.borne_supérieure_notes": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualEntity": "Table de mesure",
 			          "ConceptualProperty": "Borne_supérieure_notes"
 			        }
 			      },
@@ -3520,7 +3520,7 @@ cultureInfo fr-FR
 			    "dim_comment.borne_inférieure_sentiment": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualEntity": "Table de mesure",
 			          "ConceptualProperty": "Borne_inférieure_sentiment"
 			        }
 			      },
@@ -3643,7 +3643,7 @@ cultureInfo fr-FR
 			    "dim_comment.borne_supérieure_sentiment": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dim_Comments",
+			          "ConceptualEntity": "Table de mesure",
 			          "ConceptualProperty": "Borne_supérieure_sentiment"
 			        }
 			      },
