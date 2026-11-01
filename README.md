@@ -47,7 +47,11 @@ Le projet suit 5 grandes étapes :
 4. **Analyse sémantique** : prétraitement des commentaires, extraction des bigrams* et pondération TF-IDF pour faire ressortir les top termes, score de sentiment grâce à la méthode AFINN
 5. **Restitution** : modélisation des données et création d'un rapport Power BI interactif.
 
+![Schéma du modèle sémantique](docs/img/modele_semantique.png)
+
+
 Concernant le NLP, le choix du couple bigrams - TF-IDF  a été adopté pour privilégier l'interprétabilité et la simplicité pour préparer une future automatisation de la pipeline.
+
 
 *unigram = 1 terme, bigram = 2 termes qui se suivent
 
