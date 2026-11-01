@@ -12,6 +12,11 @@ Statut : projet en cours.
 
 ![Aperçu de la page analyse du Power BI](docs/img/PowerBI_analyse.png)
 
+Utilisation de la page "Analyse par série" : 
+- Choisir la série à analyser, éventuellement filtrer les notes et les scores de sentiment souhaités. Les paires de mots (= bigrams) les plus utilisés ressortent. 
+- En cliquant sur les bigrams, les commentaires qui les utilisent s'affichent.
+- Ex : filtrer les commentaires avec un score de sentiment négatif, puis lire les commentaires qui parlent de Dunk et Egg (les personnages principaux).
+
 ## Analyse
 **En bref** : pour A Knight of the Seven Kingdoms, les avis positifs portent sur l’évolution des personnages, les négatifs sur les deux premiers épisodes et le format court. Pour King & Conqueror, la ressemblance avec Game of Thrones attire, mais la véracité historique est critiquée.
 
@@ -39,15 +44,17 @@ Le projet suit 5 grandes étapes :
 1. **Collecte** : récupération des commentaires, notes, dates et métadonnées des deux séries sur Allociné et IMDb
 2. **Concaténation et nettoyage** : harmonisation des notes, formats et identifiants
 3. **Analyse exploratoire** : distributions des notes, différences entre les plateformes et enseignements statistiques
-4. **Analyse sémantique** : prétraitement des commentaires, extraction des bigrams et pondération TF-IDF pour faire ressortir les top termes, score de sentiment grâce à la méthode AFINN
+4. **Analyse sémantique** : prétraitement des commentaires, extraction des bigrams* et pondération TF-IDF pour faire ressortir les top termes, score de sentiment grâce à la méthode AFINN
 5. **Restitution** : modélisation des données et création d'un rapport Power BI interactif.
 
-Concernant le NLP, le choix du couple TF-IDF - bigrams a été adopté pour privilégier l'interprétabilité et la simplicité pour préparer une future automatisation de la pipeline.
+Concernant le NLP, le choix du couple bigrams - TF-IDF  a été adopté pour privilégier l'interprétabilité et la simplicité pour préparer une future automatisation de la pipeline.
+
+*unigram = 1 terme, bigram = 2 termes qui se suivent
 
 ## Limites
 - Seules les notes des spectateurs qui laissent un commentaire sont retenues, traduisant un engagement fort
 - 84 % des avis viennent d'IMDb (notation plus généreuse qu'Allociné)
-- Scraping d'IMDb n'est plus possible via Selenium aujourd'hui sans passer par la création d'un compte. Le notebook à ce sujet n'est donc pas reproductible.
+- Scraping d'IMDb plus possible via Selenium aujourd'hui sans passer par la création d'un compte. Le notebook à ce sujet n'est donc pas reproductible.
 - Les données récoltées sur Allociné et IMDb ne peuvent pas être partagées pour des raisons juridiques.
 - NLP sur les commentaires en anglais, car plus nombreux. Les commentaires d'Allociné sont donc exclus de l'analyse sémantique.
 
